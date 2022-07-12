@@ -21,6 +21,7 @@ class AdvertisingResource extends JsonResource
             'price' => $this->price,
             'main_image_url' => $this->main_image_url,
             'images' => ImageResource::collection($this->conditionalFieldSelect('images')),
+            'created_at' => $this->created_at->format('d.m.Y')
         ];
     }
 
